@@ -1,0 +1,46 @@
+.main{
+	width: 1000px;
+	padding: 0;
+	margin:auto;
+}
+#logo{
+	height: 87px;
+	background-color: #faffc7;
+	margin-bottom: 5px;
+	border: 1px solid #CDCDCD;
+}
+a {
+	color: gray;
+	text-decoration: none;
+}
+img{
+	width: 31%;
+	height: 180px;
+	border-top-width: 5px;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition:all 1s;
+}
+.zoom{
+	   
+    position: relative;
+    width: 31%;
+    height: 180px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.image-card{
+	position: absolute;
+  top: 0;
+  left: 0;
+
+}
+.image-card img{
+	-webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+
+}
+#anh:hover{
+	transform: scale(1.2);
+}
