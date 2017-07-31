@@ -1,0 +1,106 @@
+.all{
+	width: 1000px;
+	height: auto;
+	margin: auto;
+}
+@keyframes title{
+	0% {background-color:#EF7126; color: #f9E782;}
+	25% {background-color: #6F2837; color: #F376B2;}
+	50% {background-color: #9F6164; color: #F8DEBD;}
+	75% {background-color: #218C8D; color: #F9E559;}
+}
+h1{
+	text-align: center;
+	font-style: 3em;
+	font-family: Georgia;
+	animation: title 10s ease infinite;
+}
+#anh{
+	display: inline;
+}
+#anh1{
+	width: 33%;
+	height: 200px;	
+	opacity: 0.5;
+	transition: all 1s ease-in-out;
+
+}
+#anh1:hover{
+	opacity: 1;
+}
+/*LÀM MỜ, HIỆN CHỮ, ẢNH*/
+ .animated {
+           animation:p 5s ease infinite;
+            padding-top:95px;
+            margin-bottom:60px;
+            -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+         
+         /*làm hiện ra*/
+         @-webkit-keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         
+         
+         @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         .fadeIn {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;}
+         
+         /*Làm mờ*/            
+         @-webkit-keyframes fadeOut {
+         	100%{ opacity: 1; }
+         	0% { opacity: 0; }
+        
+         @keyframes fadeOut{
+         	100%{opacity: 1;}
+         	0%{opacity: 0;}
+         }
+         
+
+         }
+         .fadeOut {
+         	-webkit-animation-name:fadeOut;
+         	animation-name: fadeOut;
+         }
+         
+         /*hIỆU ỨNG CHỮ DI CHUYỂN*/
+p{	margin-left: 880px;
+	width: 100px;
+	position: relative;
+    animation-timing-function: ease-in;
+    -moz-animation: myAnimation 5s ease-out infinite;
+    -webkit-animation: myAnimation 5s ease-out infinite;
+    -o-animation: myAnimation 5s ease-out infinite;
+}
+
+@keyframes myAnimation {
+    from {right: : 0px;}
+    to {right: : 200px;}
+}
+
+/* Hien thi cho Firefox */
+@-moz-keyframes myAnimation {
+    from {right: 0px;}
+    to {right: 200px;}
+}
+
+/* Hien thi cho Safari and Chrome */
+@-webkit-keyframes myAnimation {
+    from {right: 0px;}
+    to {right:  200px;}
+}
+
+/* Hien thi cho Opera */
+@-o-keyframes myAnimation {
+    from {right:  0px;}
+    to {right:  200px;}
+}}
+
