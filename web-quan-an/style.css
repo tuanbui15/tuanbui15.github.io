@@ -1,0 +1,84 @@
+.all{
+	width: 70%;
+	margin: auto;
+}
+.header{
+	height: 100px;
+	background-color: #B11116;
+}
+.menu ul{
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #ddd;
+}
+.menu ul li a{
+	text-decoration: none;
+	color: white;
+	display: block;
+	border: 1px solid #ddd;
+}
+.menu ul li{
+/*	margin-left: 200px;*/
+	list-style-type: none;
+	float: left;
+	width: 150px;
+	height: 40px;
+	background-color: black;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	opacity: .8;
+}
+.menu ul li a:hover{
+	background-color: orange;
+
+}
+ul li ul li{
+	display: none;
+}
+ul li:hover ul li{
+	display: block;
+}
+/*------------------------------------------------------*/
+h3{
+	text-decoration: none;
+}
+.noibat{
+	display: inline-block;
+	width: 33%;
+	height: 200px;
+	overflow: hidden;
+}
+.noibat img{
+	transition: all 0.5s linear;
+	width: 100%;
+	height: auto;
+	list-style-type: none;
+}
+.noibat img:hover{
+	transform: scale(1.3);
+}
+.write{
+	display: inline-block;
+	width: 33%;
+	height: 50px;
+}
+p{
+	color: #727272;
+}
+.end{
+	height: 200px;
+	background-color: red;
+	opacity: 0.8;
+	
+}
+.bend{
+	display: inline;
+	width: 33%;
+}
+.cend{
+	width: 33%;
+	display: inline-block;
+	color: green;
+}
+.cend p{color: white}
