@@ -1,0 +1,32 @@
+.Caculator{
+	width: 30%;
+	margin: auto;
+}
+.in{
+	
+	background-color: white;
+	opacity: 0.5;
+}
+#Result{
+	    width: 94%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#number{
+	    border: none;
+    color: black;
+    padding: 7px 32px;
+  	text-align: center;
+   	text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 5px 0 0 0;
+}
+#number:hover{
+	border: 1xp solid #ddd;
+	background-color: gray;
+	opacity: .5;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Caculator</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="Caculator">
+<table>
+
+	<div class="in">
+<input type="text" id="Result"/>
+	</div>
+	<hr style="width: 94%; margin-left: 0px">
+	
+	<div class="header">
+	
+		<input type= "button" onclick ="Result.value += this.value" id="number" value = "7">
+		<input type= "button" onclick ="Result.value += this.value" id="number" value = "8">
+		<input type= "button" onclick ="Result.value += this.value" id="number" value = "9">
+		<input type= "button" onclick ="Result.value = Result.value.substr(0,Result.value.length - 1)" id="number" value = "DEL" style="padding: 7px 22px; background-color: #ffea00">
+		<input type= "button" onclick ="Result.value = ''" id="number" value = "AC" style="padding: 7px 25px; background-color: #f26767">
+	
+		<input type= "button" onclick ="Result.value += this.value" id="number" value = "4">
+		<input type= "button" onclick ="Result.value += this.value" id="number" value = "5">
+		<input type= "button" onclick ="Result.value += this.value" id="number" value = "6">
+		<input type= "button" onclick ="Result.value += this.value" id="number" value = "*" style="padding: 7px 32px;">
+		<input type= "button" onclick ="Result.value += this.value" id="number" value = ":">
+		
+		<input type= "button" onclick ="Result.value += this.value" id="number" value = "1">
+		<input type= "button" onclick ="Result.value += this.value" id="number" value = "2">
+		<input type= "button" onclick ="Result.value += this.value" id="number" value = "3">
+		<input type= "button" onclick ="Result.value += this.value"" id="number" style="padding: 7px 31px;" value = "+">
+		<input type= "button" onclick ="Result.value += this.value"" id="number" style="padding: 7px 32px;" value = "-">
+		
+		<input type= "button" onclick ="Result.value += this.value" id="number" value = "0">
+		<input type= "button" onclick ="Result.value += this.value"" id="number" style="padding: 7px 34px;" value = ".">
+		<input type= "button" onclick ="Result.value += this.value"" id="number" style="padding: 7px 28px;" value="%">
+		
+		<input type= "button" onclick ="Result.value = eval(Result.value)" id="number" style="padding: 7px 69px; background-color: #5BA9FF" value="=">
+
+
+	</div>
+</div>
+</body>
+</html>
