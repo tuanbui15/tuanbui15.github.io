@@ -2,6 +2,7 @@
 	width: 30%;
 	margin: auto;
 }
+
 .in{
 	
 	background-color: white;
@@ -22,11 +23,13 @@
   	text-align: center;
    	text-decoration: none;
     display: inline-block;
+    background-color: gray;
+    opacity: 1;
     font-size: 17px;
     margin: 5px 0 0 0;
 }
 #number:hover{
 	border: 1xp solid #ddd;
 	background-color: gray;
-	opacity: .5;
+	opacity: .6;
 }
