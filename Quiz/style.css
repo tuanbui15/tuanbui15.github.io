@@ -1,9 +1,13 @@
+
+
 .header{
-	margin-left: 500px;
+	margin: auto;
+    display: none;
 }
+.header a{text-align: center;}
 .cauhoi{
-		    width: 100%;
-		    font-family: Arial, Sans-Serif;
+	
+	font-family: Arial, Sans-Serif;
     padding: 12px 20px;
     border: 2px solid #ccc;
     border-radius: 4px;
