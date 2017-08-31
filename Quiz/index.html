@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+</head>
+<body style="margin:auto;" background="images.jpg">
+<img src="QuizGeobuuk-547x381.png" width="200px">
+<button type="button" onclick="refreshPage()">Reset</button>
+  Time left: <SPAN id=timeLeft></SPAN>&nbsp; seconds<br><br>
+
+<DIV id=answerboard  style="margin-left: 500px; font-size: 20px">&nbsp;</DIV><br>
+<DIV id=question1 style="display: none" class="header">
+	<b class="cauhoi">1. Xã đông nhất là xã nào?</b><br><br>
+	<a onclick="check_answer('a')" class="str" style="margin-left: 500px">a) xã tắc</a><br>
+	<a onclick="check_answer('b')" class="str" style="margin-left: 500px">b) xã giao</a><br>
+	<a onclick="check_answer('c')" class="str" style="margin-left: 500px">c) xã hội</a><br>
+	<a onclick="check_answer('d')" class="str" style="margin-left: 500px"> d) xã hương khê</a><br>
+</DIV>
+
+<DIV id=question2 style="DISPLAY: none" class="header">
+	<b class="cauhoi">2. Lịch nào dài nhất?</b><br><br>
+	<a onclick="check_answer('a')" class="str" style="margin-left: 500px">a) Lịch trình</a><br>
+	<a onclick="check_answer('b')" class="str" style="margin-left: 500px">b) Lịch công tác</a><br>
+	<a onclick="check_answer('c')" class="str" style="margin-left: 500px">c) Cuốn lịch</a><br>
+	<a onclick="check_answer('d')" class="str" style="margin-left: 500px">d) Lịch sử</a><br>
+</DIV>
+
+<DIV id=question3 style="DISPLAY: none" class="header">
+	<b class="cauhoi">3. Có 1 đàn chuột điếc đi ngang qua, hỏi có mấy con?</b><br><br>
+	<a onclick="check_answer('a')" class="str" style="margin-left: 500px">a) 12</a><br>
+	<a onclick="check_answer('b')" class="str" style="margin-left: 500px">b) 24</a><br>
+	<a onclick="check_answer('c')" class="str" style="margin-left: 500px">c) 6</a><br>
+	<a onclick="check_answer('d')" class="str" style="margin-left: 500px">d) 10</a><br>
+</DIV>
+
+
+<DIV id=question4 style="DISPLAY: none" class="header">
+	<b class="cauhoi">4. Từ gì mà 100% nguời dân Việt Nam đều phát âm sai?</b><br><br>
+	<a onclick="check_answer('a')" class="str" style="margin-left: 500px">a) N với L</a><br>
+	<a onclick="check_answer('b')" class="str" style="margin-left: 500px">b) Hà nội</a><br>
+	<a onclick="check_answer('c')" class="str" style="margin-left: 500px">c) Nào</a><br>
+	<a onclick="check_answer('d')" class="str" style="margin-left: 500px">d) Sai</a><br>
+</DIV>
+
+
+<DIV id=question5 style="DISPLAY: none" class="header">
+	<b class="cauhoi">5.  Cái gì người mua biết, người dùng không bao giờ biết?</b><br><br>
+	<a onclick="check_answer('a')" class="str" style="margin-left: 500px">a) Thuốc</a><br>
+	<a onclick="check_answer('b')" class="str" style="margin-left: 500px">b) Đồ ăn</a><br>
+	<a onclick="check_answer('c')" class="str" style="margin-left: 500px">c) Quan tài</a><br>
+	<a onclick="check_answer('d')" class="str" style="margin-left: 500px">d) Xe</a><br>
+</DIV>
+ 
+<DIV id=quizScore style="DISPLAY: none"></DIV>
+
+<SCRIPT language=javascript>
+
+var delay=15;
+var correctAnswers=new Array("c","d","b","d","c");
+
+var q_num=1;
+var timer;
+var layer;
+var clock=delay;
+var score=0;
+
+function show_question(){
+	if (layer=eval("document.all.question"+q_num)){
+		layer.style.display="inline";
+		 document.all.timeLeft.innerHTML=clock;
+		hide_question();
+	} else {
+		  document.all.timeLeft.innerHTML=0;
+		document.all.quizScore.innerHTML="Bạn trả lời đúng "+score+" trên "+(q_num-1)+" câu questions. ";
+		document.all.quizScore.style.display="inline";
+	 	{	if (score != 5) {'<button type="button" onclick="refreshPage()">Reset</button>'}
+
+	 		else if (score == 5) {
+	 		window.location.href='https://www.google.com.vn/?gfe_rd=cr&dcr=0&ei=7T6mWcL3KsnaugTd9bnICA'
+
+	 						}
+		}
+	}
+}
+
+function hide_question(){
+	if (clock>0) {
+		document.all.timeLeft.innerHTML=clock;
+		clock--;
+		timer=setTimeout("hide_question()",1000);
+	} else {
+		clearTimeout(timer);
+		document.all.answerboard.innerHTML="&nbsp;";
+		clock=delay;
+		layer.style.display="none";
+		q_num++;
+		show_question();
+	}
+}
+
+function check_answer(answer){
+	if (correctAnswers[q_num-1]==answer){
+		score++;
+		document.all.answerboard.innerHTML="<i><b>Đúng!</b></i>";
+	} else {
+		document.all.answerboard.innerHTML="<i><b>Sai!</b></i>";
+	}
+	clock=0;
+	clearTimeout(timer);
+	timer=setTimeout("hide_question()",1500);
+}
+
+  function refreshPage()
+        {	
+         	window.location.reload(); 
+        }
+window.onload=show_question;
+
+</SCRIPT>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+.header{
+	margin-left: 500px;
+}
+.cauhoi{
+		    width: 100%;
+		    font-family: Arial, Sans-Serif;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: #FBC52C;
+}
+.str{
+    
+    line-height: 50px;
+	width: 100%;
+	font-family: Arial, Sans-Serif;
+    border: 2px solid #ccc;
+    color: white;
+    padding: 7px 100px;
+    text-align: left;
+    font-size: 17px;
+    margin: 3px 0 0 0;
+    background-color: #654646;
+    opacity: .6;
+    font-style: oblique;
+}
+.str:hover{
+	background-color: #f42126;
+	opacity: .7
+}
