@@ -10,9 +10,11 @@
 <img src="QuizGeobuuk-547x381.png" width="200px">
  
  <div class="all" style="border-radius: 20px; border: 2px solid #ddd; box-shadow: 3px 4px 8px"><DIV id=answerBoard>&nbsp;</DIV>
-<div style="margin-left: 32px">Time left: <SPAN id=timeLeft style='color: red'></SPAN>&nbsp; seconds </div><br>
- 
 
+<div style="margin-left: 32px">Time left: <SPAN id=timeLeft style='color: red'></SPAN>&nbsp; seconds </div><br>
+ <audio autoplay>
+  <source src="AiLaTrieuPhu-VA_43vp2.mp3" type="audio/mpeg">
+</audio>
 
 <DIV id=question1 style="DISPLAY: none;" ><div id="a"><b>1. Who was the first man on the moon? </b></div>
 	<button onclick="check_answer('a')">a) Captain Kirk</button>
@@ -92,7 +94,7 @@ function check_answer(answer){
 	}
 	clock=0;
 	clearTimeout(timer);
-	timer=setTimeout("hide_question()",10);
+	timer=setTimeout("hide_question()",50);
 }
 
 window.onload=show_question;
