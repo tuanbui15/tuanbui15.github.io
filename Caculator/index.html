@@ -16,35 +16,43 @@
 	<hr style="width: 94%; margin-left: 0px">
 	
 	<div class="header" >
+
+	<div class="khung">
 		<div " onclick ="Result.value = Math.pow(Result.value, 2)" id="number" style="padding: 5px 27px">X<sup>2</sup> </div>
-		<!-- <div onclick ="factorial(Result.form) " id="number" style="padding: 7px 27px">X!</div> -->
 		<div onclick ="Result.value = Math.sqrt(Result.value)" id="number" >√</div>
 		<div onclick ="Result.value += '%'" id="number" style="padding: 7px 28px">%</div>
-
 		<div onclick ="Result.value = Result.value.substr(0,Result.value.length - 1)" id="number" ; style=" background-color: #f26767; padding: 7px 20px; margin-left: 8px" >DEL</div>
 		<div onclick ="Result.value = ''" id="number" style=" background-color: #f26767; padding: 7px 23px ">AC</div>
-
+	</div>	
+	<div class="khung">
 		<div onclick ="Result.value += '7'" id="number" >7</div>
 		<div onclick ="Result.value += '8'" id="number" >8</div>
 		<div onclick ="Result.value += '9'" id="number" >9</div>
 		<div onclick ="Result.value += '*'" id="number" style="margin-left: 8px; padding: 7px 31px">x</div>
 		<div onclick ="Result.value += '/'" id="number" style="padding: 7px 31px">÷</div>
-
+	</div>
+	<div>
 		<div onclick ="Result.value += '4'" id="number" >4</div>
 		<div onclick ="Result.value += '5'" id="number" >5</div>
 		<div onclick ="Result.value += '6'" id="number" >6</div>
 		<div onclick ="Result.value += '+'" id="number" style="padding: 7px 30px; margin-left: 8px">+</div>
 		<div onclick ="Result.value += '-'" id="number" style="padding: 7px 34px">-</div>
-		
+	</div>
+	<div class="khung">
 		<div onclick ="Result.value += '1'" id="number" >1</div>
 		<div onclick ="Result.value += '2'" id="number" >2</div>
-		<div onclick ="Result.value += '3'" id="number" >3</div>
-
-		<br>
-		
+		<div onclick ="Result.value += '3'" id="number" >3</div><br>
+	</div>
+	<div class="khung">
 		<div onclick ="Result.value += '0'" id="number" >0</div>
 		<div onclick ="Result.value += '.'" id="number" style="padding: 7px 34px">.</div>
-		<div onclick ="Result.value = eval(Result.value)" id="number" style="padding: 7px 32px; background-color: #5BA9FF; ">=</div>
+		<div onclick ="Result.value = eval(Result.value)" id="number" style="padding: 7px 32px; background-color: #5BA9FF;">=</div>
+	</div>
+</div>	
+		
+		<br>
+		
+		
 		
 		
         </div>
