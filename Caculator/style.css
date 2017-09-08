@@ -17,7 +17,7 @@ h1{
     width: 100%;
 }
 #Result{
-	    width: 94%;
+	    width: 91%;
     padding: 12px 20px;
     display: inline-block;
     border: 2px solid #ccc;
@@ -25,9 +25,11 @@ h1{
     box-sizing: border-box;
 }
 #number{
+    cursor: pointer;
+    width: 3%;
 	    border: none;
     color: black;
-    padding: 2% 8%;
+    padding: 2% 7%;
   	text-align: center;
    	text-decoration: none;
     display: inline-block;
