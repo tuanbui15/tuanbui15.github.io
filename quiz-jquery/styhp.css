@@ -1,0 +1,10 @@
+body {
+    margin-bottom: 500px;
+    background:#000;
+
+}
+ 
+canvas {
+    cursor: crosshair;
+    display: block;
+}

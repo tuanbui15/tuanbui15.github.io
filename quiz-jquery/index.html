@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+</head>
+
+<body background="images.jpg" style="background-size: 97%">
+	<img src="QuizGeobuuk-547x381.png" width="200px">
+
+	<button onclick="changetheme()" style="margin-left: 41%; width: 11%">Change theme</button>
+	<div id=answerBoard style="margin-left: 41%;">&nbsp;</div>
+	<div class="all" style="border-radius: 20px; border: 2px solid #ddd; box-shadow: 3px 4px 8px">
+
+		<audio autoplay>
+			<source src="AiLaTrieuPhu-VA_43vp2.mp3" type="audio/mpeg"/>
+		</audio>
+
+		<div style="margin-left: 5%;margin-top: 4%">Time left: <span id=timeLeft style='color: red'></span>&nbsp; seconds </div><b>
+		<div id=question1 style="display: none;" ><div id="a"><b>1. Who was the first man on the moon? </b></div>
+		<button onclick="check_answer('a')">a) Captain Kirk</button>
+		<button onclick="check_answer('b')">b) Tom Hanks</button>
+		<button onclick="check_answer('c')">c) Neil Armstrong</button> 
+		<button onclick="check_answer('d')">d) Bugs Bunny</button><br><br></div>
+		<div id=question2 style="display: none"><div id="a"><b>2. What is the largest land mammal on earth? </b><br></div>
+		<button onclick="check_answer('a')">a) John Goodman</button><br>
+		<button onclick="check_answer('b')">b) Yo Mama</button><br>
+		<button onclick="check_answer('c')">c) Humpback Whale</button><br>
+		<button onclick="check_answer('d')">d) African Elephant</button><br><br></div>
+
+		<div id=question3 style="display: none"><div id="a"><b>3. Why?</b><br></div>
+		<button onclick="check_answer('a')">a) Because</button><br>
+		<button onclick="check_answer('b')">b) Why not?</button><br>
+		<button onclick="check_answer('c')">c) Who?</button><br>
+		<button onclick="check_answer('d')">d) He did it!</button><br><br></div>
+
+		<div id=question4 style="display: none"><div id="a"><b>4. Which of the following is the longest?</b><br></div>
+		<button onclick="check_answer('a')">a) one foot</button><br>
+		<button onclick="check_answer('b')">b) one kilometer</button><br>
+		<button onclick="check_answer('c')">c) one mile</button><br>
+		<button onclick="check_answer('d')">d) 753 light years</button><br><br></div>
+
+		<div id=question5 style="display: none"><div id="a"><b>5. Which of the following actors is least likely to ever win an oscar?</b><br></div>
+		<button onclick="check_answer('a')">a) bruce Willis</button><br>
+		<button onclick="check_answer('b')">b) James Gandolfini</button><br>
+		<button onclick="check_answer('c')">c) Steven Seagal</button><br>
+		<button onclick="check_answer('d')">d) Mr. T</button><br><br></div>
+
+		<div id=quizScore style="display: none"></div>
+	</div>
+
+	<br>
+
+	<div id="reset" onclick="refreshPage()">Reset</div>
+
+	<script src="cs/jquery-3.2.1.min.js"></script>
+
+	<script>
+		var delay=15;
+		var correctAnswers=new Array("c","d","b","d","c");
+		var q_num=1;
+		var timer;
+		var layer;
+		var clock=delay;
+		var score=0;
+
+		function show_question(){
+			if (layer=eval("document.all.question"+q_num)){
+				layer.style.display="inline";
+				$('#timeLeft').html('15');
+				hide_question();
+			} else {
+				$('#timeLeft').html('0');
+				$('#quizScore').html("<p style='margin-left:5%; width:80%'></style>You have answered correctly "+score+" out of "+(q_num-1)+" questions.</p><img src='cuncon.gif' style='width:100%;'>");
+				// all.quizScore.style.display="inline";
+				$('#quizScore').css('display','inline');
+				if (score == 5) {
+					window.location.href='happy.html'
+				}
+			}
+		}
+
+		function hide_question(){
+			if (clock>0) {
+				// $.timeLeft.innerHTML=clock;
+				$('#timeLeft').html(clock);
+				clock--;
+				timer=setTimeout("hide_question()",1000);
+			} else {
+				clearTimeout(timer);
+				// $.all.answerBoard.innerHTML="&nbsp;";
+
+				$('#answerBoard').html('&nbsp');
+				clock=delay;
+				layer.style.display="none";
+				q_num++;
+				show_question();
+			}
+		}
+
+		function check_answer(answer){
+			if (correctAnswers[q_num-1]==answer){
+				score++;
+				$('#answerBoard').html('<i><h3> Correct!</h3></i>')
+		// document.all.answerBoard.innerHTML="<i><h3>Correct!</h3></i>";
+	} else {
+		$('#answerBoard').html('<i><h3> Wrong!<h3></i>')
+		// document.all.answerBoard.innerHTML="<i><h3>Wrong!</h3></i>";
+	}
+	clock=0;
+	clearTimeout(timer);
+	timer=setTimeout("hide_question()",500);
+}
+
+window.onload=show_question;
+
+function refreshPage()
+{	
+	window.location.reload(); 
+}
+window.onload=show_question;
+
+function changetheme(){
+	document.body.background = "LOONEY.jpg";
+}
+</script>
+
+
+</body>
+</html>
